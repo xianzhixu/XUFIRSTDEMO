@@ -9,13 +9,17 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property (nonatomic, strong) UIView  * firstView;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _firstView = [[UIView alloc]initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height)];
+
+    [self.view addSubview:_firstView];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
